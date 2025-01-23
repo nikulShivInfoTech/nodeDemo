@@ -22,7 +22,6 @@ const getAllUser = async (req, res) => {
         });
 
     } catch (error) {
-        console.error(error);
         res.status(500).json({ message: 'Server error' });
     }
 }
@@ -41,7 +40,7 @@ const userProfileView = async (req, res) => {
             role:user.role
         } })
     } catch (error) {
-        console.error(error);
+
         res.status(500).json({ message: 'Server error' });
     }
 
@@ -78,7 +77,7 @@ const registerUser = async (req, res) => {
             },
         });
     } catch (error) {
-        console.error(error);
+
         res.status(500).json({ message: 'Server error' });
     }
 };
@@ -104,7 +103,7 @@ const editUser = async (req, res) => {
             }
         })
     } catch (error) {
-        console.error(error);
+
         res.status(500).json({ message: 'Server error' });
     }
 }
@@ -117,7 +116,6 @@ const deleteUser = async (req, res) => {
             message: "user delete sucessfully", data: deletedData
         })
     } catch (error) {
-        console.error(error);
         res.status(500).json({ message: 'Server error' });
     }
 
